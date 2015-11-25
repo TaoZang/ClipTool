@@ -1,0 +1,538 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		2B48C2991C05D7140064C3A1 /* HAGuideController.m in Sources */ = {isa = PBXBuildFile; fileRef = 2B48C2981C05D7140064C3A1 /* HAGuideController.m */; };
+		2B57B1C91C05A7E0008FB108 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 2B57B1C81C05A7E0008FB108 /* AppDelegate.m */; };
+		2B57B1CC1C05A7E0008FB108 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 2B57B1CB1C05A7E0008FB108 /* main.m */; };
+		2B57B1CF1C05A7E0008FB108 /* HAClipController.m in Sources */ = {isa = PBXBuildFile; fileRef = 2B57B1CE1C05A7E0008FB108 /* HAClipController.m */; };
+		2B57B1D11C05A7E0008FB108 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 2B57B1D01C05A7E0008FB108 /* Assets.xcassets */; };
+		2B57B1D41C05A7E0008FB108 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2B57B1D21C05A7E0008FB108 /* Main.storyboard */; };
+		2B57B1DF1C05A7E0008FB108 /* ClipToolTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 2B57B1DE1C05A7E0008FB108 /* ClipToolTests.m */; };
+		2B57B1EA1C05A7E0008FB108 /* ClipToolUITests.m in Sources */ = {isa = PBXBuildFile; fileRef = 2B57B1E91C05A7E0008FB108 /* ClipToolUITests.m */; };
+		2B57B1FB1C05AF43008FB108 /* AVKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2B57B1FA1C05AF43008FB108 /* AVKit.framework */; };
+		2B57B1FD1C05AF49008FB108 /* AVFoundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2B57B1FC1C05AF49008FB108 /* AVFoundation.framework */; };
+		2B57B2001C05B759008FB108 /* HADocument.m in Sources */ = {isa = PBXBuildFile; fileRef = 2B57B1FF1C05B759008FB108 /* HADocument.m */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		2B57B1DB1C05A7E0008FB108 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 2B57B1BC1C05A7E0008FB108 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 2B57B1C31C05A7E0008FB108;
+			remoteInfo = ClipTool;
+		};
+		2B57B1E61C05A7E0008FB108 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 2B57B1BC1C05A7E0008FB108 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 2B57B1C31C05A7E0008FB108;
+			remoteInfo = ClipTool;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		2B48C2971C05D7140064C3A1 /* HAGuideController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HAGuideController.h; sourceTree = "<group>"; };
+		2B48C2981C05D7140064C3A1 /* HAGuideController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HAGuideController.m; sourceTree = "<group>"; };
+		2B57B1C41C05A7E0008FB108 /* ClipTool.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ClipTool.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		2B57B1C71C05A7E0008FB108 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
+		2B57B1C81C05A7E0008FB108 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
+		2B57B1CB1C05A7E0008FB108 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		2B57B1CD1C05A7E0008FB108 /* HAClipController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = HAClipController.h; sourceTree = "<group>"; };
+		2B57B1CE1C05A7E0008FB108 /* HAClipController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = HAClipController.m; sourceTree = "<group>"; };
+		2B57B1D01C05A7E0008FB108 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		2B57B1D31C05A7E0008FB108 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		2B57B1D51C05A7E0008FB108 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		2B57B1DA1C05A7E0008FB108 /* ClipToolTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = ClipToolTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		2B57B1DE1C05A7E0008FB108 /* ClipToolTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ClipToolTests.m; sourceTree = "<group>"; };
+		2B57B1E01C05A7E0008FB108 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		2B57B1E51C05A7E0008FB108 /* ClipToolUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = ClipToolUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		2B57B1E91C05A7E0008FB108 /* ClipToolUITests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ClipToolUITests.m; sourceTree = "<group>"; };
+		2B57B1EB1C05A7E0008FB108 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		2B57B1FA1C05AF43008FB108 /* AVKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AVKit.framework; path = System/Library/Frameworks/AVKit.framework; sourceTree = SDKROOT; };
+		2B57B1FC1C05AF49008FB108 /* AVFoundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AVFoundation.framework; path = System/Library/Frameworks/AVFoundation.framework; sourceTree = SDKROOT; };
+		2B57B1FE1C05B759008FB108 /* HADocument.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HADocument.h; sourceTree = "<group>"; };
+		2B57B1FF1C05B759008FB108 /* HADocument.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HADocument.m; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		2B57B1C11C05A7E0008FB108 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				2B57B1FD1C05AF49008FB108 /* AVFoundation.framework in Frameworks */,
+				2B57B1FB1C05AF43008FB108 /* AVKit.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		2B57B1D71C05A7E0008FB108 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		2B57B1E21C05A7E0008FB108 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		2B57B1BB1C05A7E0008FB108 = {
+			isa = PBXGroup;
+			children = (
+				2B57B1C61C05A7E0008FB108 /* ClipTool */,
+				2B57B1DD1C05A7E0008FB108 /* ClipToolTests */,
+				2B57B1E81C05A7E0008FB108 /* ClipToolUITests */,
+				2B57B1C51C05A7E0008FB108 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		2B57B1C51C05A7E0008FB108 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				2B57B1C41C05A7E0008FB108 /* ClipTool.app */,
+				2B57B1DA1C05A7E0008FB108 /* ClipToolTests.xctest */,
+				2B57B1E51C05A7E0008FB108 /* ClipToolUITests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		2B57B1C61C05A7E0008FB108 /* ClipTool */ = {
+			isa = PBXGroup;
+			children = (
+				2B57B1C71C05A7E0008FB108 /* AppDelegate.h */,
+				2B57B1C81C05A7E0008FB108 /* AppDelegate.m */,
+				2B57B1FE1C05B759008FB108 /* HADocument.h */,
+				2B57B1FF1C05B759008FB108 /* HADocument.m */,
+				2B48C2971C05D7140064C3A1 /* HAGuideController.h */,
+				2B48C2981C05D7140064C3A1 /* HAGuideController.m */,
+				2B57B1CD1C05A7E0008FB108 /* HAClipController.h */,
+				2B57B1CE1C05A7E0008FB108 /* HAClipController.m */,
+				2B57B1D01C05A7E0008FB108 /* Assets.xcassets */,
+				2B57B1D21C05A7E0008FB108 /* Main.storyboard */,
+				2B57B1D51C05A7E0008FB108 /* Info.plist */,
+				2B57B1CA1C05A7E0008FB108 /* Supporting Files */,
+			);
+			path = ClipTool;
+			sourceTree = "<group>";
+		};
+		2B57B1CA1C05A7E0008FB108 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				2B57B1FC1C05AF49008FB108 /* AVFoundation.framework */,
+				2B57B1FA1C05AF43008FB108 /* AVKit.framework */,
+				2B57B1CB1C05A7E0008FB108 /* main.m */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		2B57B1DD1C05A7E0008FB108 /* ClipToolTests */ = {
+			isa = PBXGroup;
+			children = (
+				2B57B1DE1C05A7E0008FB108 /* ClipToolTests.m */,
+				2B57B1E01C05A7E0008FB108 /* Info.plist */,
+			);
+			path = ClipToolTests;
+			sourceTree = "<group>";
+		};
+		2B57B1E81C05A7E0008FB108 /* ClipToolUITests */ = {
+			isa = PBXGroup;
+			children = (
+				2B57B1E91C05A7E0008FB108 /* ClipToolUITests.m */,
+				2B57B1EB1C05A7E0008FB108 /* Info.plist */,
+			);
+			path = ClipToolUITests;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		2B57B1C31C05A7E0008FB108 /* ClipTool */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 2B57B1EE1C05A7E0008FB108 /* Build configuration list for PBXNativeTarget "ClipTool" */;
+			buildPhases = (
+				2B57B1C01C05A7E0008FB108 /* Sources */,
+				2B57B1C11C05A7E0008FB108 /* Frameworks */,
+				2B57B1C21C05A7E0008FB108 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = ClipTool;
+			productName = ClipTool;
+			productReference = 2B57B1C41C05A7E0008FB108 /* ClipTool.app */;
+			productType = "com.apple.product-type.application";
+		};
+		2B57B1D91C05A7E0008FB108 /* ClipToolTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 2B57B1F11C05A7E0008FB108 /* Build configuration list for PBXNativeTarget "ClipToolTests" */;
+			buildPhases = (
+				2B57B1D61C05A7E0008FB108 /* Sources */,
+				2B57B1D71C05A7E0008FB108 /* Frameworks */,
+				2B57B1D81C05A7E0008FB108 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				2B57B1DC1C05A7E0008FB108 /* PBXTargetDependency */,
+			);
+			name = ClipToolTests;
+			productName = ClipToolTests;
+			productReference = 2B57B1DA1C05A7E0008FB108 /* ClipToolTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		2B57B1E41C05A7E0008FB108 /* ClipToolUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 2B57B1F41C05A7E0008FB108 /* Build configuration list for PBXNativeTarget "ClipToolUITests" */;
+			buildPhases = (
+				2B57B1E11C05A7E0008FB108 /* Sources */,
+				2B57B1E21C05A7E0008FB108 /* Frameworks */,
+				2B57B1E31C05A7E0008FB108 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				2B57B1E71C05A7E0008FB108 /* PBXTargetDependency */,
+			);
+			name = ClipToolUITests;
+			productName = ClipToolUITests;
+			productReference = 2B57B1E51C05A7E0008FB108 /* ClipToolUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		2B57B1BC1C05A7E0008FB108 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0710;
+				ORGANIZATIONNAME = Tao;
+				TargetAttributes = {
+					2B57B1C31C05A7E0008FB108 = {
+						CreatedOnToolsVersion = 7.1.1;
+						DevelopmentTeam = Q47UZ85LL5;
+					};
+					2B57B1D91C05A7E0008FB108 = {
+						CreatedOnToolsVersion = 7.1.1;
+						TestTargetID = 2B57B1C31C05A7E0008FB108;
+					};
+					2B57B1E41C05A7E0008FB108 = {
+						CreatedOnToolsVersion = 7.1.1;
+						TestTargetID = 2B57B1C31C05A7E0008FB108;
+					};
+				};
+			};
+			buildConfigurationList = 2B57B1BF1C05A7E0008FB108 /* Build configuration list for PBXProject "ClipTool" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 2B57B1BB1C05A7E0008FB108;
+			productRefGroup = 2B57B1C51C05A7E0008FB108 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				2B57B1C31C05A7E0008FB108 /* ClipTool */,
+				2B57B1D91C05A7E0008FB108 /* ClipToolTests */,
+				2B57B1E41C05A7E0008FB108 /* ClipToolUITests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		2B57B1C21C05A7E0008FB108 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				2B57B1D11C05A7E0008FB108 /* Assets.xcassets in Resources */,
+				2B57B1D41C05A7E0008FB108 /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		2B57B1D81C05A7E0008FB108 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		2B57B1E31C05A7E0008FB108 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		2B57B1C01C05A7E0008FB108 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				2B57B1CF1C05A7E0008FB108 /* HAClipController.m in Sources */,
+				2B48C2991C05D7140064C3A1 /* HAGuideController.m in Sources */,
+				2B57B1CC1C05A7E0008FB108 /* main.m in Sources */,
+				2B57B1C91C05A7E0008FB108 /* AppDelegate.m in Sources */,
+				2B57B2001C05B759008FB108 /* HADocument.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		2B57B1D61C05A7E0008FB108 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				2B57B1DF1C05A7E0008FB108 /* ClipToolTests.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		2B57B1E11C05A7E0008FB108 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				2B57B1EA1C05A7E0008FB108 /* ClipToolUITests.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		2B57B1DC1C05A7E0008FB108 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 2B57B1C31C05A7E0008FB108 /* ClipTool */;
+			targetProxy = 2B57B1DB1C05A7E0008FB108 /* PBXContainerItemProxy */;
+		};
+		2B57B1E71C05A7E0008FB108 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 2B57B1C31C05A7E0008FB108 /* ClipTool */;
+			targetProxy = 2B57B1E61C05A7E0008FB108 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		2B57B1D21C05A7E0008FB108 /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				2B57B1D31C05A7E0008FB108 /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		2B57B1EC1C05A7E0008FB108 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "-";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				MACOSX_DEPLOYMENT_TARGET = 10.11;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = macosx;
+			};
+			name = Debug;
+		};
+		2B57B1ED1C05A7E0008FB108 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "-";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				MACOSX_DEPLOYMENT_TARGET = 10.11;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = macosx;
+			};
+			name = Release;
+		};
+		2B57B1EF1C05A7E0008FB108 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "Developer ID Application";
+				COMBINE_HIDPI_IMAGES = YES;
+				INFOPLIST_FILE = ClipTool/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = in.harmless.ClipTool;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Debug;
+		};
+		2B57B1F01C05A7E0008FB108 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "Developer ID Application";
+				COMBINE_HIDPI_IMAGES = YES;
+				INFOPLIST_FILE = ClipTool/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = in.harmless.ClipTool;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Release;
+		};
+		2B57B1F21C05A7E0008FB108 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				COMBINE_HIDPI_IMAGES = YES;
+				INFOPLIST_FILE = ClipToolTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks @loader_path/../Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = in.harmless.ClipToolTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/ClipTool.app/Contents/MacOS/ClipTool";
+			};
+			name = Debug;
+		};
+		2B57B1F31C05A7E0008FB108 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				COMBINE_HIDPI_IMAGES = YES;
+				INFOPLIST_FILE = ClipToolTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks @loader_path/../Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = in.harmless.ClipToolTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/ClipTool.app/Contents/MacOS/ClipTool";
+			};
+			name = Release;
+		};
+		2B57B1F51C05A7E0008FB108 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				COMBINE_HIDPI_IMAGES = YES;
+				INFOPLIST_FILE = ClipToolUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks @loader_path/../Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = in.harmless.ClipToolUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_TARGET_NAME = ClipTool;
+				USES_XCTRUNNER = YES;
+			};
+			name = Debug;
+		};
+		2B57B1F61C05A7E0008FB108 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				COMBINE_HIDPI_IMAGES = YES;
+				INFOPLIST_FILE = ClipToolUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks @loader_path/../Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = in.harmless.ClipToolUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_TARGET_NAME = ClipTool;
+				USES_XCTRUNNER = YES;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		2B57B1BF1C05A7E0008FB108 /* Build configuration list for PBXProject "ClipTool" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				2B57B1EC1C05A7E0008FB108 /* Debug */,
+				2B57B1ED1C05A7E0008FB108 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		2B57B1EE1C05A7E0008FB108 /* Build configuration list for PBXNativeTarget "ClipTool" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				2B57B1EF1C05A7E0008FB108 /* Debug */,
+				2B57B1F01C05A7E0008FB108 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		2B57B1F11C05A7E0008FB108 /* Build configuration list for PBXNativeTarget "ClipToolTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				2B57B1F21C05A7E0008FB108 /* Debug */,
+				2B57B1F31C05A7E0008FB108 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		2B57B1F41C05A7E0008FB108 /* Build configuration list for PBXNativeTarget "ClipToolUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				2B57B1F51C05A7E0008FB108 /* Debug */,
+				2B57B1F61C05A7E0008FB108 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 2B57B1BC1C05A7E0008FB108 /* Project object */;
+}
