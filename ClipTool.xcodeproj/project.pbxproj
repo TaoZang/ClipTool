@@ -7,6 +7,10 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		2B245B701C063F6400AD1616 /* HAVideoView.m in Sources */ = {isa = PBXBuildFile; fileRef = 2B245B6F1C063F6400AD1616 /* HAVideoView.m */; };
+		2B245B731C06EC2F00AD1616 /* HAEditController.m in Sources */ = {isa = PBXBuildFile; fileRef = 2B245B721C06EC2F00AD1616 /* HAEditController.m */; };
+		2B245B761C06F6CD00AD1616 /* HASubtitle.m in Sources */ = {isa = PBXBuildFile; fileRef = 2B245B751C06F6CD00AD1616 /* HASubtitle.m */; };
+		2B245B7C1C06FB8400AD1616 /* HASubtitleCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 2B245B7B1C06FB8400AD1616 /* HASubtitleCell.m */; };
 		2B48C2991C05D7140064C3A1 /* HAGuideController.m in Sources */ = {isa = PBXBuildFile; fileRef = 2B48C2981C05D7140064C3A1 /* HAGuideController.m */; };
 		2B57B1C91C05A7E0008FB108 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 2B57B1C81C05A7E0008FB108 /* AppDelegate.m */; };
 		2B57B1CC1C05A7E0008FB108 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 2B57B1CB1C05A7E0008FB108 /* main.m */; };
@@ -38,6 +42,14 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		2B245B6E1C063F6400AD1616 /* HAVideoView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HAVideoView.h; sourceTree = "<group>"; };
+		2B245B6F1C063F6400AD1616 /* HAVideoView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HAVideoView.m; sourceTree = "<group>"; };
+		2B245B711C06EC2F00AD1616 /* HAEditController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HAEditController.h; sourceTree = "<group>"; };
+		2B245B721C06EC2F00AD1616 /* HAEditController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HAEditController.m; sourceTree = "<group>"; };
+		2B245B741C06F6CD00AD1616 /* HASubtitle.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HASubtitle.h; sourceTree = "<group>"; };
+		2B245B751C06F6CD00AD1616 /* HASubtitle.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HASubtitle.m; sourceTree = "<group>"; };
+		2B245B7A1C06FB8400AD1616 /* HASubtitleCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HASubtitleCell.h; sourceTree = "<group>"; };
+		2B245B7B1C06FB8400AD1616 /* HASubtitleCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HASubtitleCell.m; sourceTree = "<group>"; };
 		2B48C2971C05D7140064C3A1 /* HAGuideController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HAGuideController.h; sourceTree = "<group>"; };
 		2B48C2981C05D7140064C3A1 /* HAGuideController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HAGuideController.m; sourceTree = "<group>"; };
 		2B57B1C41C05A7E0008FB108 /* ClipTool.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ClipTool.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -119,6 +131,14 @@
 				2B48C2981C05D7140064C3A1 /* HAGuideController.m */,
 				2B57B1CD1C05A7E0008FB108 /* HAClipController.h */,
 				2B57B1CE1C05A7E0008FB108 /* HAClipController.m */,
+				2B245B711C06EC2F00AD1616 /* HAEditController.h */,
+				2B245B721C06EC2F00AD1616 /* HAEditController.m */,
+				2B245B6E1C063F6400AD1616 /* HAVideoView.h */,
+				2B245B6F1C063F6400AD1616 /* HAVideoView.m */,
+				2B245B7A1C06FB8400AD1616 /* HASubtitleCell.h */,
+				2B245B7B1C06FB8400AD1616 /* HASubtitleCell.m */,
+				2B245B741C06F6CD00AD1616 /* HASubtitle.h */,
+				2B245B751C06F6CD00AD1616 /* HASubtitle.m */,
 				2B57B1D01C05A7E0008FB108 /* Assets.xcassets */,
 				2B57B1D21C05A7E0008FB108 /* Main.storyboard */,
 				2B57B1D51C05A7E0008FB108 /* Info.plist */,
@@ -286,8 +306,12 @@
 			buildActionMask = 2147483647;
 			files = (
 				2B57B1CF1C05A7E0008FB108 /* HAClipController.m in Sources */,
+				2B245B7C1C06FB8400AD1616 /* HASubtitleCell.m in Sources */,
 				2B48C2991C05D7140064C3A1 /* HAGuideController.m in Sources */,
 				2B57B1CC1C05A7E0008FB108 /* main.m in Sources */,
+				2B245B731C06EC2F00AD1616 /* HAEditController.m in Sources */,
+				2B245B761C06F6CD00AD1616 /* HASubtitle.m in Sources */,
+				2B245B701C063F6400AD1616 /* HAVideoView.m in Sources */,
 				2B57B1C91C05A7E0008FB108 /* AppDelegate.m in Sources */,
 				2B57B2001C05B759008FB108 /* HADocument.m in Sources */,
 			);

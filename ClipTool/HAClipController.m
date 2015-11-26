@@ -7,20 +7,19 @@
 //
 
 #import "HAClipController.h"
-#import <AVKit/AVKit.h>
-#import <AVFoundation/AVFoundation.h>
+#import "HAVideoView.h"
 
 @interface HAClipController ()
 
-@property (weak) IBOutlet AVPlayerView *videoView;
+@property (weak) IBOutlet HAVideoView *videoView;
 @property (weak) IBOutlet NSTextField *keyTextField;
 @property (weak) IBOutlet NSTextField *nameTextField;
 @property (weak) IBOutlet NSButton *uploadButton;
 @property (weak) IBOutlet NSButton *commitButton;
-@property (weak) IBOutlet NSSlider *videoSlider;
 @property (weak) IBOutlet NSTextField *timeLabel;
 @property (weak) IBOutlet NSTextField *frameLabel;
 @property (weak) IBOutlet NSButton *clipButton;
+@property (weak) IBOutlet NSScrollView *tableView;
 
 @property (nonatomic) AVPlayer *player;
 
@@ -38,8 +37,11 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
+}
+
+- (void)viewWillAppear {
+    [super viewWillAppear];
     
-    NSLog(@"view did load");
 }
 
 @end

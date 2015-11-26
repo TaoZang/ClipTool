@@ -14,6 +14,7 @@
 @property (nonatomic) NSWindowController *windowController;
 
 - (IBAction)openMovieFile:(id)sender;
+- (IBAction)openSubtitleEditor:(id)sender;
 
 @end
 
@@ -27,11 +28,29 @@
     [openPanel beginSheetModalForWindow:self.view.window completionHandler:^(NSInteger result) {
         if (result == NSFileHandlingPanelOKButton) {
             NSURL *fileURL = [[openPanel URLs] firstObject];
-            HADocument *document = [[HADocument alloc] initWithContentsOfURL:fileURL ofType:@"document" error:nil];
+            HADocument *document = [[HADocument alloc] initWithContentsOfURL:fileURL ofType:@"clip" error:nil];
             
             [[NSDocumentController sharedDocumentController] addDocument:document];
             [document makeWindowControllers];
             [document showWindows];
+        }
+    }];
+}
+
+- (IBAction)openSubtitleEditor:(id)sender {
+    NSOpenPanel *openPanel = [NSOpenPanel openPanel];
+    [openPanel setAllowsMultipleSelection:NO];
+    [openPanel setAllowedFileTypes:@[@"mp4"]];
+    
+    [openPanel beginSheetModalForWindow:self.view.window completionHandler:^(NSInteger result) {
+        if (result == NSFileHandlingPanelOKButton) {
+            NSURL *fileURL = [[openPanel URLs] firstObject];
+            if (fileURL) {
+                HADocument *document = [[HADocument alloc] initWithContentsOfURL:fileURL ofType:@"subtitle" error:nil];
+                [[NSDocumentController sharedDocumentController] addDocument:document];
+                [document makeWindowControllers];
+                [document showWindows];
+            }
         }
     }];
 }
