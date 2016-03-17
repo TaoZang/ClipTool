@@ -11,7 +11,7 @@
 #import "HASubtitleCell.h"
 #import "HASubtitle.h"
 
-@interface HAEditController () <NSTableViewDataSource, NSTableViewDelegate>
+@interface HAEditController () <NSTableViewDataSource, NSTableViewDelegate, HAVideoFrameSteppingDelegate>
 
 @property (weak) IBOutlet HAVideoView *videoView;
 @property (weak) IBOutlet NSTextField *timeLabel;
@@ -28,8 +28,10 @@
 - (IBAction)didEndSubtitle:(id)sender;
 - (IBAction)didCommitSubtitle:(id)sender;
 - (IBAction)didExportSubtitle:(id)sender;
-- (IBAction)didRemoveItem:(id)sender;
 
+- (IBAction)didRemoveItem:(id)sender;
+- (IBAction)didMoveupItem:(id)sender;
+- (IBAction)didMovedownItem:(id)sender;
 
 @end
 
@@ -48,7 +50,7 @@
     
     self.tableView.delegate = self;
     self.tableView.dataSource = self;
-    self.videoView.showsFrameSteppingButtons = YES;
+    self.videoView.delegate = self;
 }
 
 - (NSInteger)numberOfRowsInTableView:(NSTableView *)tableView {
@@ -70,25 +72,47 @@
     return cellView;
 }
 
+- (void)onPlayingTimeChanged:(HAVideoView *)videoView {
+    [self updateTimeLabel];
+}
+
 - (IBAction)didRemoveItem:(id)sender {
-    NSLog(@"remove");
+    NSInteger index = [self.tableView rowForView:sender];
+    [self.subtitleArray removeObjectAtIndex:index];
+    [self.tableView removeRowsAtIndexes:[NSIndexSet indexSetWithIndex:index] withAnimation:NSTableViewAnimationEffectFade];
+}
+
+- (IBAction)didMoveupItem:(id)sender {
+    NSInteger index = [self.tableView selectedRow];
+    if (index > 0 && index < self.subtitleArray.count) {
+        [self.tableView moveRowAtIndex:index toIndex:(index - 1)];
+        [self moveItemAtIndex:index toIndex:(index - 1)];
+    }
+}
+
+- (IBAction)didMovedownItem:(id)sender {
+    NSInteger index = [self.tableView selectedRow];
+    if (index >= 0 && index < (self.subtitleArray.count - 1)) {
+        [self.tableView moveRowAtIndex:index toIndex:(index + 1)];
+        [self moveItemAtIndex:index toIndex:(index + 1)];
+    }
 }
 
 - (void)didInsertSubtitle:(id)sender {
     CMTime currentTime = self.player.currentTime;
-    self.startTimeField.stringValue = [self formatCMTime:currentTime];
+    self.startTimeField.stringValue = [self formatCMTime:[self convertTime:currentTime]];
 }
 
 - (void)didEndSubtitle:(id)sender {
     CMTime currentTime = self.player.currentTime;
-    self.endTimeField.stringValue = [self formatCMTime:currentTime];
+    self.endTimeField.stringValue = [self formatCMTime:[self convertTime:currentTime]];
 }
 
 - (void)didCommitSubtitle:(id)sender {
     HASubtitle *subtitle = [[HASubtitle alloc] init];
     subtitle.startTime = self.startTimeField.stringValue;
     subtitle.endTime = self.endTimeField.stringValue;
-    subtitle.content = [self.contentText.textStorage string];
+    subtitle.content = [NSString stringWithString:[self.contentText.textStorage string]];
     
     [sender resignFirstResponder];
     [self.subtitleArray addObject:subtitle];
@@ -109,11 +133,27 @@
     }
 }
 
-- (NSString *)formatCMTime:(CMTime)currentTime {
-    CMTime frameTime = CMTimeConvertScale(currentTime, 25, kCMTimeRoundingMethod_RoundTowardZero);
+- (void)updateTimeLabel {
+    CMTime currentTime = self.player.currentTime;
+    CMTime frameTime = [self convertTime:currentTime];
+    self.timeLabel.stringValue = [NSString stringWithFormat:@"TimeStamp: %@", [self formatCMTime:frameTime]];
+    self.frameLabel.stringValue = [NSString stringWithFormat:@"Frame: %ld", (long)frameTime.value];
+}
+
+- (NSString *)formatCMTime:(CMTime)frameTime {
     NSInteger second = frameTime.value / 25;
     NSInteger msecond = frameTime.value % 25 * 40;
-    return [NSString stringWithFormat:@"00:%.2ld:%.3ld", (long)second, (long)msecond];
+    return [NSString stringWithFormat:@"00:%.2ld.%.3ld", (long)second, (long)msecond];
+}
+
+- (CMTime)convertTime:(CMTime)time {
+    return CMTimeConvertScale(time, 25, kCMTimeRoundingMethod_RoundTowardZero);
+}
+
+- (void)moveItemAtIndex:(NSInteger)srcIndex toIndex:(NSInteger)destIndex {
+    HASubtitle *srcItem = [self.subtitleArray objectAtIndex:srcIndex];
+    [self.subtitleArray removeObjectAtIndex:srcIndex];
+    [self.subtitleArray insertObject:srcItem atIndex:destIndex];
 }
 
 - (NSMutableArray *)subtitleArray {

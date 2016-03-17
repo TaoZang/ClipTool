@@ -30,16 +30,19 @@
 
 - (void)keyDown:(NSEvent *)theEvent {
     [super keyDown:theEvent];
-    
-    if (self.delegate && [self.delegate respondsToSelector:@selector(onFrameSteppingToTime:)]) {
-        [self.delegate onFrameSteppingToTime:self.player.currentTime];
+    NSLog(@"on key down");
+    if (self.delegate && [self.delegate respondsToSelector:@selector(onPlayingTimeChanged:)]) {
+        [self.delegate onPlayingTimeChanged:self];
     }
 }
 
 - (void)mouseDown:(NSEvent *)theEvent {
     [super mouseDown:theEvent];
-   
+    NSLog(@"on mouse down");
     [self becomeFirstResponder];
+    if (self.delegate && [self.delegate respondsToSelector:@selector(onPlayingTimeChanged:)]) {
+        [self.delegate onPlayingTimeChanged:self];
+    }
 }
 
 - (BOOL)acceptsFirstResponder {

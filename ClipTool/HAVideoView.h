@@ -9,9 +9,10 @@
 #import <AVKit/AVKit.h>
 #import <AVFoundation/AVFoundation.h>
 
+@class HAVideoView;
 @protocol HAVideoFrameSteppingDelegate <NSObject>
 
-- (void)onFrameSteppingToTime:(CMTime)currentTime;
+- (void)onPlayingTimeChanged:(HAVideoView *)videoView;
 
 @end
 
